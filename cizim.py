@@ -18,13 +18,17 @@ class Drawer(QWidget):
         self.image = QImage(w, h, QImage.Format_RGB32)
         self.path = QPainterPath()
         self.clearImage()
-
-    def clearImage(self):#Tahtayı temizle
+	
+	
+	#Tahtayı temizleme fonksiyonu
+    def clearImage(self):
         self.path = QPainterPath()
         self.image.fill(Qt.white)
         self.update()
-
-    def saveImage(self, fileName, fileFormat):#Resmi kaydet
+	
+	
+	#Resmi kaydetme fonksiyonu
+    def saveImage(self, fileName, fileFormat):
         self.image.save(fileName, fileFormat)
 
     def paintEvent(self, event):
@@ -41,13 +45,15 @@ class Drawer(QWidget):
         p.drawPath(self.path)
         p.end()
         self.update()
-
+	
+	
+	#Pencere boyutları
     def sizeHint(self):
         return QSize(800, 300)
 
 
-
-def save_pic():#Resmi kaydettikten sonra ana programa geçme
+#Resmi kaydettikten sonra ana programa geçme
+def save_pic():
     drawer.saveImage("image.png", "PNG")
     os.startfile('mainprog.exe')
 
