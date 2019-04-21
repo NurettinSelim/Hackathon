@@ -2,7 +2,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets #Arayüz kütüphanesi
 import pytesseract #Resimden yazıya aktarma kütüphanesi
 from PIL import Image #Resimden yazıya akatarmaya yardımcı kütüphane
 from googletrans import Translator #Çeviri kütüphanesi
-from gtts import gTTS #Text to Speech(Yazıdan sese) kütüphanesi
+from gtts import gTTS #Google Text to Speech(Yazıdan sese) kütüphanesi
 import playsound #Ses çalma kütüphanesi
 import os
 class Ui_MainWindow(object):
