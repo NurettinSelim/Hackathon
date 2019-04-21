@@ -8,3 +8,4 @@ Required Libraries:
 -googletrans(Google Translate)
 -gtts(Google Text to Speech)
 -playsound
+
